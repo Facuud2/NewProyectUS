@@ -1,0 +1,343 @@
+/* -------- Fonts ---------- */
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
+
+/* ---------- Opciones Generales ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cabin", sans-serif;
+}
+
+body {
+  background-color: gray;
+  width: 1024px;
+  height: 800px;
+  margin: auto;
+}
+
+/* ---------- Header / Nav ---------- */
+header {
+  width: 100%;
+  height: 300px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(230, 230, 230);
+  position: relative;
+  letter-spacing: 2px;
+}
+
+header nav ul li a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+  /*animacion de derecha a izquierda*/
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+/* --------- Comienzo del body -------- */
+.estructuraPrincipal {
+  margin-top: 10px;
+  display: grid;
+  height: auto;
+  background-color: cadetblue;
+  grid-template-columns: 334px 334px 337px;
+  grid-template-rows: 500px 300px 300px;
+  gap: 0px 10px;
+  grid-template-areas:
+    "columnaDerecha columnaCentral columnaIzquierda"
+    "SegundaSeccion SegundaSeccion SegundaSeccion"
+    "SegundaSeccion SegundaSeccion SegundaSeccion"
+    "footer footer footer";
+}
+
+/* ---------- Generalizador de columnas --------- */
+.estructura--columnaDer,
+.estructura--columnaCen,
+.estructura--columnaIzq {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background-color: white;
+}
+
+.estructuraPrincipal .columna--img {
+  border: 2px solid black;
+  padding: 3px;
+}
+
+/* --------- Modificacion de columnas --------- */
+.estructura--columnaDer {
+  grid-area: columnaDerecha;
+}
+
+.estructura--columnaCen {
+  grid-area: columnaCentral;
+}
+
+.estructura--columnaIzq {
+  grid-area: columnaIzquierda;
+}
+
+/* --------- Comienzo de .segundaSeccion* --------- */
+.estructuraSecundaria {
+  margin-top: 10px;
+  grid-area: SegundaSeccion;
+  background-color: indianred;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* --------- Comienzo de .pensador ---------- */
+.secundaria--pensador {
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pensador--img {
+  border-radius: 200px;
+}
+
+.pensador--frase {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+}
+
+footer {
+  height: auto;
+  grid-area: footer;
+  background-color: rgba(41, 41, 41, 1);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer--fila {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footer--fila p {
+  margin: 10px;
+}
+
+.footer--fila p a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer--icons {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer--icons i {
+  font-size: 30px;
+  margin: 10px;
+  border-radius: 100px;
+  border: 3px solid black;
+  padding: 5px;
+  color: black;
+}
+
+.footer--icons i:hover {
+  color: white;
+  border: 3px white solid;
+}
+
+/* ----------- Shop.html stuff ---------- */
+.estructuraPrincipal .productos {
+  width: 900px;
+  height: 1000px;
+  overflow: scroll;
+  margin: 35px;
+  background-color: red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.estructuraPrincipal .productos div {
+  margin: 20px;
+  width: 400px;
+  background-color: rgba(14, 14, 14, 1);
+  color: rgba(228, 228, 228, 1);
+  height: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  cursor: pointer;
+}
+
+.estructuraPrincipal .productos p {
+  margin: 10px 0px;
+}
+
+/* --------- Community.html ---------- */
+
+/* ---------- Generalizador de contenido ---------- */
+.estructuraPrincipal-Commu p,
+figcaption {
+  margin-left: 10px;
+  color: rgba(208, 208, 208, 1);
+}
+
+.estructuraPrincipal-Commu img {
+  margin-left: 10px;
+  border-radius: 100px;
+}
+/* ------------ Estructura Principal ---------- */
+.estructuraPrincipal-Commu .trustpilot {
+  display: grid;
+  margin-bottom: 10px;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 150px 200px 200px 200px;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 25px 50px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "trustpilot--write trustpilot--write trustpilot--write"
+    "trust1 trust1 trust1"
+    "trust2 trust2 trust2"
+    "trust3 trust3 trust3";
+}
+
+.estructuraPrincipal-Commu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap column;
+  background-color: cadetblue;
+}
+
+.trustpilot--write {
+  grid-area: trustpilot--write;
+  background-color: rgba(48, 48, 48, 1);
+  border: 2px black solid;
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.trustpilot--write button {
+  margin-right: 10px;
+}
+
+.trustpilot--write i {
+  color: rgba(208, 208, 208, 1);
+  margin: 1px;
+}
+
+.trust1 {
+  grid-area: trust1;
+  background-color: rgba(48, 48, 48, 1);
+  border: 2px black solid;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.trust2 {
+  grid-area: trust2;
+  background-color: rgba(48, 48, 48, 1);
+  border: 2px black solid;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.trust3 {
+  grid-area: trust3;
+  background-color: rgba(48, 48, 48, 1);
+  border: 2px black solid;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* ---------- Formulario.html ---------- */
+
+.bodyBg {
+  background:linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)),
+  url(https://images.unsplash.com/photo-1505409859467-3a796fd5798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat center fixed;
+  background-size: 100%;
+}
+
+.formsBs {
+  width:950px;
+  height: auto;
+  margin:auto;
+  margin-top:50px;
+  color:white;
+}
+
+/* ---------- AboutUs.html ---------- */
+.info {
+  background-color: cadetblue;
+}
+.jumbotron {
+  margin-top:20px;
+  background-color: rgba(48, 48, 48, 1);
+  color:rgba(208, 208, 208, 1);
+}
+
+.w-100 {
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
