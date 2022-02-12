@@ -220,7 +220,6 @@ footer {
 }
 
 /* --------- Community.html ---------- */
-
 /* ---------- Generalizador de contenido ---------- */
 .estructuraPrincipal-Commu p,
 figcaption {
@@ -232,6 +231,7 @@ figcaption {
   margin-left: 10px;
   border-radius: 100px;
 }
+
 /* ------------ Estructura Principal ---------- */
 .estructuraPrincipal-Commu .trustpilot {
   display: grid;
@@ -312,29 +312,29 @@ figcaption {
 }
 
 /* ---------- Formulario.html ---------- */
-
 .bodyBg {
-  background:linear-gradient(rgba(5,7,12,0.75),rgba(5,7,12,0.75)),
-  url(https://images.unsplash.com/photo-1505409859467-3a796fd5798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat center fixed;
+  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
+    url(https://images.unsplash.com/photo-1505409859467-3a796fd5798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80) no-repeat center fixed;
   background-size: 100%;
 }
 
 .formsBs {
-  width:950px;
+  width: 950px;
   height: auto;
-  margin:auto;
-  margin-top:50px;
-  color:white;
+  margin: auto;
+  margin-top: 50px;
+  color: white;
 }
 
 /* ---------- AboutUs.html ---------- */
 .info {
   background-color: cadetblue;
 }
+
 .jumbotron {
-  margin-top:20px;
+  margin-top: 20px;
   background-color: rgba(48, 48, 48, 1);
-  color:rgba(208, 208, 208, 1);
+  color: rgba(208, 208, 208, 1);
 }
 
 .w-100 {
