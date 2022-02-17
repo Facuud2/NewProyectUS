@@ -1,4 +1,4 @@
-/* -------- Fonts ---------- */
+/* ---------- Fonts ---------- */
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
 
 /* ---------- Opciones Generales ---------- */
@@ -62,7 +62,7 @@ header nav ul li a:hover::after {
   transform: scaleX(1);
 }
 
-/* --------- Comienzo del body -------- */
+/* ----------- Comienzo del body ---------- */
 .estructuraPrincipal {
   margin-top: 10px;
   display: grid;
@@ -78,10 +78,10 @@ header nav ul li a:hover::after {
     "footer footer footer";
 }
 
-/* ---------- Generalizador de columnas --------- */
-.estructura--columnaDer,
-.estructura--columnaCen,
-.estructura--columnaIzq {
+/* ---------- Generalizador de columnas ----------- */
+.estructura__columnaDer,
+.estructura__columnaCen,
+.estructura__columnaIzq {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -90,25 +90,25 @@ header nav ul li a:hover::after {
   background-color: white;
 }
 
-.estructuraPrincipal .columna--img {
+.estructuraPrincipal .columna__img {
   border: 2px solid black;
   padding: 3px;
 }
 
-/* --------- Modificacion de columnas --------- */
-.estructura--columnaDer {
+/* ----------- Modificacion de columnas ----------- */
+.estructura__columnaDer {
   grid-area: columnaDerecha;
 }
 
-.estructura--columnaCen {
+.estructura__columnaCen {
   grid-area: columnaCentral;
 }
 
-.estructura--columnaIzq {
+.estructura__columnaIzq {
   grid-area: columnaIzquierda;
 }
 
-/* --------- Comienzo de .segundaSeccion* --------- */
+/* ----------- Comienzo de .segundaSeccion* ----------- */
 .estructuraSecundaria {
   margin-top: 10px;
   grid-area: SegundaSeccion;
@@ -119,8 +119,8 @@ header nav ul li a:hover::after {
   justify-content: space-evenly;
 }
 
-/* --------- Comienzo de .pensador ---------- */
-.secundaria--pensador {
+/* ----------- Comienzo de .pensador ---------- */
+.secundaria__pensador {
   width: 100%;
   height: 400px;
   background-color: white;
@@ -130,11 +130,11 @@ header nav ul li a:hover::after {
   align-items: center;
 }
 
-.pensador--img {
+.pensador__img {
   border-radius: 200px;
 }
 
-.pensador--frase {
+.pensador__frase {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
 }
@@ -149,7 +149,7 @@ footer {
   justify-content: space-around;
 }
 
-.footer--fila {
+.footer__fila {
   width: 100%;
   height: 50%;
   display: flex;
@@ -158,16 +158,16 @@ footer {
   align-items: center;
 }
 
-.footer--fila p {
+.footer__fila p {
   margin: 10px;
 }
 
-.footer--fila p a {
+.footer__fila p a {
   text-decoration: none;
   color: white;
 }
 
-.footer--icons {
+.footer__icons {
   width: 100%;
   height: 50%;
   display: flex;
@@ -176,7 +176,7 @@ footer {
   align-items: center;
 }
 
-.footer--icons i {
+.footer__icons i {
   font-size: 30px;
   margin: 10px;
   border-radius: 100px;
@@ -185,7 +185,7 @@ footer {
   color: black;
 }
 
-.footer--icons i:hover {
+.footer__icons i:hover {
   color: white;
   border: 3px white solid;
 }
@@ -220,7 +220,7 @@ footer {
   margin: 10px 0px;
 }
 
-/* --------- Community.html ---------- */
+/* ----------- Community.html ---------- */
 /* ---------- Generalizador de contenido ---------- */
 .estructuraPrincipal-Commu p,
 figcaption {
@@ -233,7 +233,7 @@ figcaption {
   border-radius: 100px;
 }
 
-/* ------------ Estructura Principal ---------- */
+/* ----------__ Estructura Principal ---------- */
 .estructuraPrincipal-Commu .trustpilot {
   display: grid;
   margin-bottom: 10px;
@@ -244,13 +244,13 @@ figcaption {
   gap: 25px 50px;
   grid-auto-flow: row;
   grid-template-areas:
-    "trustpilot--write trustpilot--write trustpilot--write"
+    "trustpilot__write trustpilot__write trustpilot__write"
     "trust1 trust1 trust1"
     "trust2 trust2 trust2"
     "trust3 trust3 trust3";
 }
 
-.estructuraPrincipal-Commu {
+.estructuraPrincipal_Commu {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -258,8 +258,8 @@ figcaption {
   background-color: cadetblue;
 }
 
-.trustpilot--write {
-  grid-area: trustpilot--write;
+.trustpilot__write {
+  grid-area: trustpilot__write;
   background-color: rgba(48, 48, 48, 1);
   border: 2px black solid;
   margin-top: 10px;
@@ -270,11 +270,11 @@ figcaption {
   border-radius: 2px;
 }
 
-.trustpilot--write button {
+.trustpilot__write button {
   margin-right: 10px;
 }
 
-.trustpilot--write i {
+.trustpilot__write i {
   color: rgba(208, 208, 208, 1);
   margin: 1px;
 }
