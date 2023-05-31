@@ -1,32 +1,54 @@
 /* ---------- Fonts ---------- */
 @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 /* ---------- Opciones Generales ---------- */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Cabin", sans-serif !important;
+  font-family: "Cabin", sans-serif;
+}
+
+div {
+  background-color: #F5F5F5;
 }
 
 body {
-  background-color: gray;
-  width: 1024px;
+  /* background-color: gray; */
+  background-color: #EDEDED;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
   height: auto;
   margin: auto;
 }
 
+
+
 /* ---------- Header / Nav ---------- */
 header {
-  width: 100%;
-  height: 300px;
-  background-color: cadetblue;
+  height: auto;
+  background-color: #28384C;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  margin-left: 25px;
 }
 
 ul {
   display: flex;
-  justify-content: space-evenly;
+  width: 600px;
+  justify-content: space-around;
   align-items: center;
   list-style-type: none;
+  margin-right: 150px;
+  font-size: large;
+  font-family: "Oswald", sans-serif !important;
 }
 
 header nav ul li {
@@ -67,26 +89,43 @@ header nav ul li a:hover::after {
   margin-top: 10px;
   display: grid;
   height: auto;
-  background-color: cadetblue;
-  grid-template-columns: 334px 334px 337px;
-  grid-template-rows: 500px 300px 300px;
+  margin-left: 10px;
+  margin-right: 10px;
+  grid-template-columns: repeat(4,25%);
+  grid-template-rows: 700px 225px 225px;
   gap: 0px 10px;
   grid-template-areas:
-    "columnaDerecha columnaCentral columnaIzquierda"
-    "SegundaSeccion SegundaSeccion SegundaSeccion"
-    "SegundaSeccion SegundaSeccion SegundaSeccion"
-    "footer footer footer";
+    "columnaUno columnaDos columnaTres columnaCuatro"
+    "SegundaSeccion SegundaSeccion SegundaSeccion SegundaSeccion"
+    "SegundaSeccion SegundaSeccion SegundaSeccion SegundaSeccion"
+    "footer footer footer footer";
+}
+
+main h1
+{
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif !important;
+  margin-top: 5px;
+  font-size: 48px;
+  font-weight: bold;
+  color: #1C1C1C; /* Color del texto */
+  text-align: center;
+  padding: 20px;
+
 }
 
 /* ---------- Generalizador de columnas ----------- */
-.estructura__columnaDer,
-.estructura__columnaCen,
-.estructura__columnaIzq {
+.estructura__columnaUno,
+.estructura__columnaDos,
+.estructura__columnaTres,
+.estructura__columnaCuatro {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-evenly;
   text-align: center;
+  font-size: large;
   background-color: white;
 }
 
@@ -96,27 +135,33 @@ header nav ul li a:hover::after {
 }
 
 /* ----------- Modificacion de columnas ----------- */
-.estructura__columnaDer {
-  grid-area: columnaDerecha;
+.estructura__columnaUno {
+  grid-area: columnaUno;
 }
 
-.estructura__columnaCen {
-  grid-area: columnaCentral;
+.estructura__columnaDos {
+  grid-area: columnaDos;
 }
 
-.estructura__columnaIzq {
-  grid-area: columnaIzquierda;
+.estructura__columnaTres {
+  grid-area: columnaTres;
+}
+
+.estructura__columnaCuatro {
+  grid-area: columnaCuatro;
+  margin-right: 30px;
 }
 
 /* ----------- Comienzo de .segundaSeccion* ----------- */
 .estructuraSecundaria {
   margin-top: 10px;
   grid-area: SegundaSeccion;
-  background-color: indianred;
+  /* background-color: indianred; */
   display: flex;
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-evenly;
+  margin-right: 30px;
 }
 
 /* ----------- Comienzo de .pensador ---------- */
@@ -132,6 +177,8 @@ header nav ul li a:hover::after {
 
 .pensador__img {
   border-radius: 200px;
+  padding: 3px;
+  border:1px solid #bbbbbb;
 }
 
 .pensador__frase {
@@ -142,7 +189,7 @@ header nav ul li a:hover::after {
 footer {
   height: auto;
   grid-area: footer;
-  background-color: rgba(41, 41, 41, 1);
+  background-color: #28384C !important;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -156,6 +203,7 @@ footer {
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-items: center;
+  background-color: #28384C;
 }
 
 .footer__fila p {
@@ -174,6 +222,7 @@ footer {
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  background: #28384C;
 }
 
 .footer__icons i {
@@ -188,342 +237,4 @@ footer {
 .footer__icons i:hover {
   color: white;
   border: 3px white solid;
-}
-
-/* ----------- Shop.html stuff ---------- */
-.estructuraPrincipal .productos {
-  width: 900px;
-  height: 1000px;
-  overflow: scroll;
-  margin: 35px;
-  background-color: red;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.estructuraPrincipal .productos div {
-  margin: 20px;
-  width: 400px;
-  background-color: rgba(14, 14, 14, 1);
-  color: rgba(228, 228, 228, 1);
-  height: auto;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  cursor: pointer;
-}
-
-.estructuraPrincipal .productos p {
-  margin: 10px 0px;
-}
-
-/* ----------- Community.html ---------- */
-/* ---------- Generalizador de contenido ---------- */
-.estructuraPrincipal_Commu p,
-figcaption {
-  margin-left: 10px;
-  color: rgba(208, 208, 208, 1);
-}
-
-.estructuraPrincipal-Commu img {
-  margin-left: 10px;
-  border-radius: 100px;
-}
-
-/* ----------__ Estructura Principal ---------- */
-.estructuraPrincipal_Commu .trustpilot {
-  display: grid;
-  margin-bottom: 10px;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 150px 200px 200px 200px;
-  grid-auto-columns: 1fr;
-  grid-auto-rows: 1fr;
-  gap: 25px 50px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "trustpilot__write trustpilot__write trustpilot__write"
-    "trust1 trust1 trust1"
-    "trust2 trust2 trust2"
-    "trust3 trust3 trust3";
-}
-
-.estructuraPrincipal_Commu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: wrap column;
-  background-color: cadetblue;
-}
-
-.trustpilot__write {
-  grid-area: trustpilot__write;
-  background-color: rgba(48, 48, 48, 1);
-  border: 2px black solid;
-  margin-top: 10px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 2px;
-}
-
-.trustpilot__write button {
-  margin-right: 10px;
-}
-
-.trustpilot__write i {
-  color: rgba(208, 208, 208, 1);
-  margin: 1px;
-}
-
-.trust1 {
-  grid-area: trust1;
-  background-color: rgba(48, 48, 48, 1);
-  border: 2px black solid;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.trust2 {
-  grid-area: trust2;
-  background-color: rgba(48, 48, 48, 1);
-  border: 2px black solid;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-}
-
-.trust3 {
-  grid-area: trust3;
-  background-color: rgba(48, 48, 48, 1);
-  border: 2px black solid;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  border-radius: 10px;
-}
-
-/* ---------- Formulario.html ---------- */
-.bodyBg {
-  background: linear-gradient(rgba(5, 7, 12, 0.75), rgba(5, 7, 12, 0.75)),
-    url(https://images.unsplash.com/photo-1505409859467-3a796fd5798e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)
-      no-repeat center fixed;
-  background-size: 100%;
-}
-
-.formsBs {
-  width: 950px;
-  height: auto;
-  margin: auto;
-  margin-top: 50px;
-  color: white;
-}
-
-/* ---------- AboutUs.html ---------- */
-.info {
-  background-color: cadetblue;
-}
-
-.jumbotron {
-  margin-top: 20px;
-  background-color: rgba(48, 48, 48, 1);
-  color: rgba(208, 208, 208, 1);
-}
-
-.w-100 {
-  margin-bottom: 10px;
-  border-radius: 20px;
-}
-
-
-
-
-
-
-@media screen and (min-width: 320px) and (max-width: 599px) {
-  body{
-    width: 320px;
-    height: auto;
-  }
-  header {
-    width: 320px;
-    height: auto;
-  }
-
-  header .img {
-    width: 320px;
-    height: auto;
-  }
-
-  .estructuraPrincipal {
-    margin-top: 10px;
-    display: grid;
-    height: auto;
-    background-color: cadetblue;
-    grid-template-columns: 320px;
-    grid-template-rows: 500px 500px 500px;
-    gap: 10px 0px;
-    grid-template-areas:
-      "columnaDerecha"
-      "columnaCentral"
-      "columnaIzquierda"
-      "SegundaSeccion"
-      "footer";
-  }
-  .estructura__columnaDer {
-    grid-area: columnaDerecha;
-  }
-
-  .estructura__columnaCen {
-    grid-area: columnaCentral;
-  }
-
-  .estructura__columnaIzq {
-    grid-area: columnaIzquierda;
-  }
-
-  .estructura__columnaDer,
-  .estructura__columnaCen,
-  .estructura__columnaIzq {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-  }
-  .estructuraSecundaria {
-    margin-top: 10px;
-    grid-area: SegundaSeccion;
-    background-color: indianred;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .secundaria__pensador {
-    background-color: indianred;
-  }
-  .pensador__frase {
-    font-family: "Oswald", sans-serif !important;
-    font-size: 15px;
-    text-align: center;
-  }
-  footer {
-    width: 320px;
-    height: auto;
-    grid-area: footer;
-    background-color: rgba(41, 41, 41, 1);
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: space-around;
-  }
-  .estructuraPrincipal_Commu .trustpilot {
-    display: grid;
-    margin-bottom: 10px;
-    grid-template-columns: 320px;
-    grid-template-rows: 150px 200px 200px 200px;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 25px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "trustpilot__write"
-      "trust1"
-      "trust2"
-      "trust3";
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 600px) and (max-width: 1023px) {
-  body {
-    width: 600px;
-    height: 800px;
-  }
-
-  header {
-    height: auto;
-  }
-
-  header .img {
-    width: 100%;
-    height: auto;
-  }
-  .estructuraPrincipal {
-    display: grid;
-    grid-template-columns: 600px;
-    grid-template-rows: 500px 500px 500px 500px;
-    gap: 5px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "columnaDerecha"
-      "columnaCentral"
-      "columnaIzquierda"
-      "SegundaSeccion"
-      "footer";
-  }
-
-  .estructura__columnaDer {
-    grid-area: columnaDerecha;
-  }
-
-  .estructura__columnaCen {
-    grid-area: columnaCentral;
-  }
-
-  .estructura__columnaIzq {
-    grid-area: columnaIzquierda;
-  }
-
-  .estructura__columnaDer,
-  .estructura__columnaCen,
-  .estructura__columnaIzq {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: white;
-  }
-
-  .pensador__frase {
-    font-family: "Oswald", sans-serif !important;
-    font-size: 13px;
-  }
-  .estructuraPrincipal_Commu .trustpilot {
-    display: grid;
-    margin-bottom: 10px;
-    grid-template-columns: 600px;
-    grid-template-rows: 150px 200px 200px 200px;
-    grid-auto-columns: 1fr;
-    grid-auto-rows: 1fr;
-    gap: 25px 0px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "trustpilot__write"
-      "trust1"
-      "trust2"
-      "trust3";
-  }
 }
