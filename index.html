@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <title>Home - NewProyectUS</title>
 </head>
 
@@ -87,47 +89,52 @@
     </div>
   </main>
   <div class="terceraSeccion">
-    <form class="formularioJs" action="#" method="get">
-      <p>¡Comunicate con nosotros si lo necesitas!</p>
-
-      <div class="formBtn">
-        <label for="nombre">Nombre (s)</label>
-        <input 
-        type="text" 
-        id="nombre"
-        placeholder="Ingrese su (s) nombre (s)"
-        />
-      </div>
-
-      <div class="formBtn">
-        <label for="apellido">Apellido (s)</label>
+    <div data-aos="fade-right" data-aos-delay="200" class="formularioTotal">
+      <form action="jasdj.html" method="get" id="formularioJs" class="formularioJs">
+        <p>¡Comunicate con nosotros si lo necesitas!</p>
+  
+        <div class="formBtn">
+          <label for="nombre">Nombre (s)</label>
           <input 
           type="text" 
-          id="apellido"
-          placeholder="Ingrese su (s) apellido (s)"
-
+          id="nombre"
+          placeholder="Ingrese su (s) nombre (s)"
+          
           />
-      </div>
+        </div>
   
-      <div class="formBtn">
-        <label for="email">E-mail</label>
-          <input 
-          type="email" 
-          id="email"
-          placeholder="Ingrese su correo"
-          />
-      </div>
-        
-      <div class="formBtn">
-        <label for="cajaTexto">¿Como podemos ayudarte?</label>
-          <textarea 
-          name="cajaTexto" 
-          id="cajaTexto"
-          placeholder="Escriba su necesidad"></textarea>
-      </div>
-
-        <input type="button" value="Enviar →">
-  </form>
+        <div class="formBtn">
+          <label for="apellido">Apellido (s)</label>
+            <input 
+            type="text" 
+            id="apellido"
+            placeholder="Ingrese su (s) apellido (s)"
+            
+  
+            />
+        </div>
+    
+        <div class="formBtn">
+          <label for="email">E-mail</label>
+            <input 
+            type="email" 
+            id="email"
+            placeholder="Ingrese su correo"
+            
+            />
+        </div>
+          
+        <div class="formBtn">
+          <label for="cajaTexto">¿Como podemos ayudarte?</label>
+            <textarea 
+            name="cajaTexto" 
+            id="cajaTexto"
+            placeholder="Escriba su necesidad"></textarea>
+        </div>
+  
+          <button id="enviar"value="Enviar →">Enviar </button>
+        </form>
+    </div>
   </div>
   <footer>
     <div class="footer__fila">
@@ -141,7 +148,9 @@
       <i class="fa-brands fa-discord"></i>
     </div>
   </footer>
-
+  <script>
+    AOS.init();
+  </script>
+<script src="js/script.js"></script>
 </body>
-
 </html>
