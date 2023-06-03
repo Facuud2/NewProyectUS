@@ -227,7 +227,84 @@ h2
   color: #EFFFF7;
 }
 
-/* Comienzo de Footer */
+/* --------- Comienzo de formulario JS ---------- */
+
+.terceraSeccion
+{
+  width: 100%;
+  height: 710px;
+  background: #00948F;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: normal;
+}
+
+.formularioJs
+{
+  width: 240px;
+  height: auto;
+  border-top: 7px solid #28384C;
+  background: #EDEDED;
+  text-align: center;
+  margin: 40px 0px 40px 175px;
+  padding: 60px 70px 80px 60px;
+  box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.56);
+  
+}
+
+.formularioJs .formBtn
+{
+  margin-top: 15px;
+  background: transparent;
+  padding: 5px 0 5px 0;
+  height: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.formularioJs .formBtn label 
+{
+  margin-bottom: 5px;
+}
+
+.formularioJs .formBtn input
+{
+  width: 100%;
+  padding: 5px 10px;
+} 
+
+.formularioJs input[type=button]
+{
+  color: #EFFFF7;
+  margin-top: 30px;
+  border-radius: 75px;
+  width: auto;
+  font-size: large;
+  padding: 10px 40px;
+  background-color: #28384C;
+  transition: all 0.606s;
+}
+
+.formularioJs input[type=button]:hover
+{
+  background: #EDEDED;
+  border: 2px solid #28384C;
+  color: #28384C;
+}
+
+.formularioJs textarea
+{
+  width: 100%;
+  height: 70px;
+  padding: 5px 10px;
+  resize: none;
+}
+
+/* --------- Comienzo de Footer --------- */
+
 footer {
   height: auto;
   grid-area: footer;
