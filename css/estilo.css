@@ -227,7 +227,7 @@ h2
   color: #EFFFF7;
 }
 
-/* --------- Comienzo de formulario JS ---------- */
+/* --------- Comienzo de tercera seccion ---------- */
 
 .terceraSeccion
 {
@@ -235,10 +235,13 @@ h2
   height: 710px;
   background: #00948F;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   justify-content: left;
   align-items: normal;
+  background-image: url('https://global-uploads.webflow.com/5e1145b6c5e98c8cf5f3293f/5e690dcc1d3cc27d937decc8_topographic-background.png');
 }
+
+
 
 .formularioJs
 {
@@ -310,15 +313,55 @@ h2
   color: #28384C;
 }
 
+/* ----------- Seccion de la derecha del formulario ---------- */
 
-/* --------- Bloques de error --------- */
-
-#errorBlock,
-#successBlock {
-  transition: opacity 2.6s;
-  opacity: 1;
+.terceraSeccion .terceraSeccion__trabajos
+{
+  width: 100%;
+  /* background-color: indianred; */
+  margin-left: 45px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
+.terceraSeccion .terceraSeccion__trabajos h1
+{
+  color: #1C1C1C;
+}
+
+
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas
+{
+  width: 75%;
+  height: auto;
+  padding: 50px;
+  /* background: #000; */
+  display: grid;
+  grid-template-columns: repeat(3, 5fr);
+  grid-template-rows: repeat(3, 5fr);
+  gap: 50px;
+}
+
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento
+{
+  display: flex;
+  font-family: 'Poppins', sans-serif !important;
+  background: #ededed;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-size: large;
+  padding: 20px;
+}
+
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento i
+{
+  font-size: 48px;
+}
+
+
+/* --------- Bloques de error --------- */
 
 #errorBlock {
   background-color: #ff4c43;
