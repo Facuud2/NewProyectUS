@@ -1,80 +1,11 @@
-// const formulario = document.getElementById('formularioJs');
 
-// const campoNombre = document.getElementById('nombre');
+const mQ600 = window.matchMedia('max-width: 1080px')
 
-// const campoApellido = document.getElementById('apellido');
-
-// const campoEmail = document.getElementById('email');
-
-// const campoHelp = document.getElementById('cajaTexto')
-
-// const alerta = document.getElementById('errorBlock')
-
-// const success = document.getElementById('successBlock')
-
-// formulario.addEventListener("submit", function(e) {
-//     e.preventDefault();
-
-//     if(!formulario) {
-
-//         if(campoNombre.value.trim() === ''){
-//             campoNombre.style.border = '1px solid #EF4444';
-//             alerta.style.display = 'block'
-    
-//             setTimeout(function() {
-//                 campoNombre.style.border = '1px solid #708090';
-//                 alerta.style.display = 'none'
-    
-//             }, 3600);
-//         }
-    
-//         if(campoApellido.value.trim() === ''){
-//             campoApellido.style.border = '1px solid #EF4444';
-//             alerta.style.display = 'block'
-    
-    
-//             setTimeout(function() {
-//                 campoApellido.style.border = '1px solid #708090';
-//                 alerta.style.display = 'none'
-    
-//             }, 3600);
-//         }
-    
-//         if(campoEmail.value.trim() === ''){
-//             campoEmail.style.border = '1px solid #EF4444';
-//             alerta.style.display = 'block'
-    
-    
-//             setTimeout(function() {
-//                 campoEmail.style.border = '1px solid #708090';
-//                 alerta.style.display = 'none'
-    
-//             }, 3600);
-//         }
-    
-//         if(cajaTexto.value.trim() === ''){
-//             cajaTexto.style.border = '1px solid #EF4444';
-//             alerta.style.display = 'block';
-    
-    
-//             setTimeout(function() {
-//                 cajaTexto.style.border = '1px solid #708090';
-//                 alerta.style.display = 'none'
-    
-//             }, 3600);
-//         }
-//     }
-
-
-//     if(formulario){
-//         success.style.display = 'block'
-
-//         setTimeout(function() {
-//             success.style.display = 'none'
-//         },3600)
-//     }
-// }
-// );
+if(mQ600){
+    document.getElementById('columnaUno').setAttribute('data-aos','fade-right')
+    document.getElementById('columnaDos').setAttribute('data-aos','fade-right')
+    document.getElementById('columnaTres').setAttribute('data-aos','fade-right')
+}
 
 const formulario = document.getElementById('formularioJs');
 const campoNombre = document.getElementById('nombre');
@@ -158,13 +89,3 @@ formulario.addEventListener("submit", function(e) {
         }, 3600);
     }
 });
-
-
-document.getElementById('menu-toggle').addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('active');
-})
-
-function toggleMenu() {
-    var menu = document.getElementById("menu");
-    menu.classList.toggle("open");
-  }

@@ -10,7 +10,7 @@
   font-family: "Cabin", sans-serif;
   color:#000;
   scroll-behavior: smooth;
-  
+  box-sizing: border-box;
 }
 
 body {
@@ -437,3 +437,102 @@ footer {
 }
 
 /* ---------- Realizacion de Media Quieries ---------- */
+
+@media screen and (max-width:761px) {
+  header
+  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header img
+  {
+    margin: 0;
+
+  }
+  header nav ul
+  {
+    display: none;
+  }
+
+
+  /* ---------- Realizacion de estructura principal Mw600px ----------*/
+
+  .columnaVacia1, .columnaVacia2
+  {
+    display: none;
+  }
+
+
+  .estructuraPrincipal
+  {
+  margin-top: 10px;
+  display: grid;
+  height: auto;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3,590px) 590px; 
+  column-gap: 70px;
+  grid-template-areas:
+    "columnaUno"
+    "columnaDos"
+    "columnaTres"
+    "SegundaSeccion" 
+    "footer"
+  }
+
+.estructura__columnaUno p,
+.estructura__columnaDos p,
+.estructura__columnaTres p
+{
+  margin: 0 45px 0 45px;
+}
+
+.estructuraPrincipal .marco {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 2px solid black;
+  padding: 3px;
+}
+
+.estructura__columnaUno img,
+.estructura__columnaDos img,
+.estructura__columnaTres img {
+  transition: all 0.606s;
+  width: 250px;
+  height: 250px;
+}
+
+.estructura__columnaUno img:hover,
+.estructura__columnaDos img:hover,
+.estructura__columnaTres img:hover {
+  transform: scale(1.303);
+}
+
+.estructuraSecundaria .estructuraSecundaria__pensador .pensador__frase 
+{
+  font-family: "Oswald", sans-serif !important;
+  font-size: 18px;
+  color: #EFFFF7;
+
+
+}
+}
+
+@media screen and (max-width:1080px) and (max-height:2300px) {
+  header
+  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  header img
+  {
+    margin: 0;
+
+  }
+  header nav ul
+  {
+    display: none;
+  }
+}
