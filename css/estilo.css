@@ -438,7 +438,7 @@ footer {
 
 /* ---------- Realizacion de Media Quieries ---------- */
 
-@media screen and (max-width:761px) {
+@media screen and (max-width:760px) {
   header
   {
     width: 100%;
