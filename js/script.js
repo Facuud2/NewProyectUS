@@ -158,3 +158,13 @@ formulario.addEventListener("submit", function(e) {
         }, 3600);
     }
 });
+
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    document.getElementById('menu').classList.toggle('active');
+})
+
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("open");
+  }
