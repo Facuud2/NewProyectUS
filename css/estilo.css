@@ -508,6 +508,12 @@ footer {
   .terceraSeccion .formularioJs
   {
     margin: 35px 0 35px 0;
+    padding-left: 70px;
+  }
+
+  .terceraSeccion .terceraSeccion__trabajos
+  {
+    margin: 0;
   }
 
   .terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento {
