@@ -8,9 +8,8 @@
   margin: 0;
   padding: 0;
   font-family: "Cabin", sans-serif;
-  color:#000;
+  color: #000;
   scroll-behavior: smooth;
-  box-sizing: border-box;
 }
 
 body {
@@ -86,7 +85,7 @@ header nav ul li a:hover::after {
   margin-top: 10px;
   display: grid;
   height: auto;
-  grid-template-columns: 150px repeat(3,1fr) 150px;
+  grid-template-columns: 150px repeat(3, 1fr) 150px;
   grid-template-rows: 590px 225px 225px;
   column-gap: 70px;
   grid-template-areas:
@@ -102,7 +101,8 @@ main h1 {
   margin-top: 5px;
   font-size: 48px;
   font-weight: bold;
-  color: #1C1C1C; /* Color del texto */
+  color: #1C1C1C;
+  /* Color del texto */
   text-align: center;
   padding: 20px;
 }
@@ -110,8 +110,7 @@ main h1 {
 /* ---------- Generalizador de columnas ----------- */
 .estructura__columnaUno,
 .estructura__columnaDos,
-.estructura__columnaTres
-{
+.estructura__columnaTres {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -130,8 +129,7 @@ main h1 {
   padding: 3px;
 }
 
-.estructuraPrincipal
-{
+.estructuraPrincipal {
   background-position: center;
   transition: all 0.606s;
 }
@@ -149,8 +147,7 @@ main h1 {
 }
 
 
-h2 
-{
+h2 {
   font-family: Roboto;
 }
 
@@ -173,8 +170,7 @@ h2
   margin-right: -70px;
 }
 
-.columnaVacia2
-{
+.columnaVacia2 {
   grid-area: columnaVacia2;
 }
 
@@ -202,8 +198,7 @@ h2
   align-items: center;
 }
 
-.estructuraSecundaria__pensador .marco 
-{
+.estructuraSecundaria__pensador .marco {
   width: 270px;
   height: 270px;
   border: 2px solid #2D2D2D;
@@ -214,8 +209,7 @@ h2
 
 }
 
-.estructuraSecundaria__pensador .marco img
-{
+.estructuraSecundaria__pensador .marco img {
   width: 100%;
   height: 100%;
   border-radius: 20px;
@@ -229,7 +223,7 @@ h2
 
 /* --------- Comienzo de tercera seccion ---------- */
 
-.terceraSeccion
+.terceraSeccion 
 {
   width: 100%;
   height: 780px;
@@ -243,7 +237,7 @@ h2
 
 
 
-.formularioJs
+.formularioJs 
 {
   width: 240px;
   height: auto;
@@ -255,10 +249,10 @@ h2
   box-shadow: 5px 5px 40px rgba(0, 0, 0, 0.56);
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  
+
 }
 
-.formularioJs .formBtn
+.formularioJs .formBtn 
 {
   margin-top: 15px;
   background: transparent;
@@ -275,15 +269,14 @@ h2
   margin-bottom: 5px;
 }
 
-.formularioJs .formBtn input
+.formularioJs .formBtn input 
 {
   width: 100%;
   padding: 5px 10px;
   border: 1px solid #708090;
-} 
+}
 
-.formularioJs textarea
-{
+.formularioJs textarea {
   width: 100%;
   height: 70px;
   padding: 5px 10px;
@@ -292,8 +285,7 @@ h2
 
 }
 
-.formularioJs button
-{
+.formularioJs button {
   color: #EFFFF7;
   margin-top: 30px;
   border-radius: 75px;
@@ -306,8 +298,7 @@ h2
   cursor: pointer;
 }
 
-.formularioJs button:hover
-{
+.formularioJs button:hover {
   background: #EDEDED;
   border: 2px solid #28384C;
   color: #28384C;
@@ -315,8 +306,7 @@ h2
 
 /* ----------- Seccion de la derecha del formulario ---------- */
 
-.terceraSeccion .terceraSeccion__trabajos
-{
+.terceraSeccion .terceraSeccion__trabajos {
   width: 100%;
   /* background-color: indianred; */
   margin-left: 45px;
@@ -326,14 +316,12 @@ h2
   align-items: center;
 }
 
-.terceraSeccion .terceraSeccion__trabajos h1
-{
+.terceraSeccion .terceraSeccion__trabajos h1 {
   color: #1C1C1C;
 }
 
 
-.terceraSeccion .terceraSeccion__trabajos .gridMarcas
-{
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas {
   width: 75%;
   height: auto;
   padding: 50px;
@@ -344,8 +332,7 @@ h2
   gap: 50px;
 }
 
-.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento
-{
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento {
   display: flex;
   font-family: 'Poppins', sans-serif !important;
   flex-flow: column nowrap;
@@ -354,8 +341,7 @@ h2
   padding: 20px;
 }
 
-.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento i
-{
+.terceraSeccion .terceraSeccion__trabajos .gridMarcas .gridMarcas__elemento i {
   font-size: 48px;
 }
 
@@ -371,8 +357,7 @@ h2
   display: none;
 }
 
-#successBlock
-{
+#successBlock {
   background: #10B981;
   width: 100%;
   padding: 15px 10px;
@@ -439,92 +424,98 @@ footer {
 /* ---------- Realizacion de Media Quieries ---------- */
 
 @media screen and (max-width:640px) {
-  header
-  {
+  header {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
-  header img
-  {
+
+  header img {
     margin: 0;
 
   }
-  header nav ul
-  {
+
+  header nav ul {
     display: none;
+  }
+
+  /* ---------- Realizacion de estructura principal Mw640px ----------*/
+
+  .columnaVacia1,
+  .columnaVacia2 {
+    display: none;
+  }
+
+
+  .estructuraPrincipal {
+    margin-top: 10px;
+    display: grid;
+    height: auto;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 590px) 590px;
+    column-gap: 70px;
+    grid-template-areas:
+      "columnaUno"
+      "columnaDos"
+      "columnaTres"
+      "SegundaSeccion"
+      "footer"
+  }
+
+  .estructura__columnaUno p,
+  .estructura__columnaDos p,
+  .estructura__columnaTres p {
+    margin: 0 45px 0 45px;
+  }
+
+  .estructuraPrincipal .marco {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border: 2px solid black;
+    padding: 3px;
+  }
+
+  .estructura__columnaUno img,
+  .estructura__columnaDos img,
+  .estructura__columnaTres img {
+    transition: all 0.606s;
+    width: 250px;
+    height: 250px;
+  }
+
+  .estructura__columnaUno img:hover,
+  .estructura__columnaDos img:hover,
+  .estructura__columnaTres img:hover {
+    transform: scale(1.303);
+  }
+
+  .estructuraSecundaria .estructuraSecundaria__pensador .pensador__frase {
+    font-family: "Oswald", sans-serif !important;
+    font-size: 18px;
+    color: #EFFFF7;
   }
 
   .terceraSeccion
   {
-    display: none;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
   }
 
-  footer
+  .terceraSeccion .formularioJs
   {
-    display: none;
+    margin: 35px 0 35px 0;
   }
 
-  /* ---------- Realizacion de estructura principal Mw600px ----------*/
-
-  .columnaVacia1, .columnaVacia2
-  {
-    display: none;
-  }
-
-
-  .estructuraPrincipal
-  {
-  margin-top: 10px;
-  display: grid;
-  height: auto;
-  grid-template-columns: 100%;
-  grid-template-rows: repeat(3,590px) 590px; 
-  column-gap: 70px;
-  grid-template-areas:
-    "columnaUno"
-    "columnaDos"
-    "columnaTres"
-    "SegundaSeccion" 
-    "footer"
-  }
-
-.estructura__columnaUno p,
-.estructura__columnaDos p,
-.estructura__columnaTres p
-{
-  margin: 0 45px 0 45px;
+  .terceraSeccion .terceraSeccion__trabajos h1{
+    text-align: center;
+    font-size: x-large;
+    margin: 0;
 }
-
-.estructuraPrincipal .marco {
-  width: 250px;
-  height: 250px;
-  overflow: hidden;
-  border: 2px solid black;
-  padding: 3px;
-}
-
-.estructura__columnaUno img,
-.estructura__columnaDos img,
-.estructura__columnaTres img {
-  transition: all 0.606s;
-  width: 250px;
-  height: 250px;
-}
-
-.estructura__columnaUno img:hover,
-.estructura__columnaDos img:hover,
-.estructura__columnaTres img:hover {
-  transform: scale(1.303);
-}
-
-.estructuraSecundaria .estructuraSecundaria__pensador .pensador__frase 
-{
-  font-family: "Oswald", sans-serif !important;
-  font-size: 18px;
-  color: #EFFFF7;
-
-
+.footer {
+  width: 100%;
 }
 }
-
