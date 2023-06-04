@@ -455,6 +455,15 @@ footer {
     display: none;
   }
 
+  .terceraSeccion
+  {
+    display: none;
+  }
+
+  footer
+  {
+    display: none;
+  }
 
   /* ---------- Realizacion de estructura principal Mw600px ----------*/
 
